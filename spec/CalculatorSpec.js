@@ -7,44 +7,44 @@ describe('calculator', function() {
     calculator = new Calculator
   })
 
-  it('responds to calculate function', function() {
-    expect(calculator.calculate).toBeDefined()
-  })
+  // it('responds to calculate function', function() {
+  //   expect(calculator.calculate).toBeDefined()
+  // })
 
-  it('cannot split 1 gem between 2 hunters, regardless of value', function() {
-    expect(calculator.calculate([10], 2)).toEqual('Cannot be split equally.')
-  })
+  // it('cannot split 1 gem between 2 hunters, regardless of value', function() {
+  //   expect(calculator.calculate([10], 2)).toEqual('Cannot be split equally.')
+  // })
 
-  it('will apportion one gem to one hunter', function() {
-    expect(calculator.calculate([10], 1)).toEqual('Split successful.')
-  })
+  // it('will apportion one gem to one hunter', function() {
+  //   expect(calculator.calculate([10], 1)).toEqual('Split successful.')
+  // })
 
-  it('can calculate the total of the gem array', function() {
-    calculator.calculate([4,4,4], 3)
-    expect(calculator.total).toEqual(12)
-  })
+  // it('can calculate the total of the gem array', function() {
+  //   calculator.calculate([4,4,4], 3)
+  //   expect(calculator.total).toEqual(12)
+  // })
 
-  it('can identify an oversized gem that prevents fair division', function() {
-    expect(calculator.calculate([12,3,4], 3)).toEqual('Cannot be split equally.')
-  })
+  // it('can identify an oversized gem that prevents fair division', function() {
+  //   expect(calculator.calculate([12,3,4], 3)).toEqual('Cannot be split equally.')
+  // })
 
-  it('can sort and reverse an array of gems', function() {
-    calculator.calculate([3, 6, 4, 12, 34, 9], 2)
-    expect(calculator.gems).toEqual([34, 12, 9, 6, 4, 3])
-  })
+  // it('can sort an array of gems', function() {
+  //   calculator.calculate([3, 6, 4, 12, 34, 9], 2)
+  //   expect(calculator.gems).toEqual([3, 4, 6, 9, 12, 34])
+  // })
 
-  it('can calculate a fair share', function() {
-    calculator.calculate([4, 2, 2, 4], 3)
-    expect(calculator.fairShare).toEqual(4)
-  })
+  // it('can calculate a fair share', function() {
+  //   calculator.calculate([4, 2, 2, 4], 3)
+  //   expect(calculator.fairShare).toEqual(4)
+  // })
 
-  it('has an array of hunter shares', function() {
-    expect(calculator.shares).toBeDefined()
-  })
+  // it('has an array of hunter shares', function() {
+  //   expect(calculator.shares).toBeDefined()
+  // })
 
   it('gathers an array of gems for the first hunter', function() {
     calculator.calculate([1, 2, 3], 2)
-    expect(calculator.shares.length).toEqual(true)
+    expect(calculator.shares.length).toBeGreaterThan(0)
   })
 
   // it('can fulfil examples from spec', function() {
