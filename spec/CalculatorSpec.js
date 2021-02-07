@@ -11,7 +11,7 @@ describe('calculator', function() {
     expect(calculator.calculate).toBeDefined()
   })
 
-  it('cannot split 1 gem between 2 hunter, regardless of value', function() {
+  it('cannot split 1 gem between 2 hunters, regardless of value', function() {
     expect(calculator.calculate([10], 2)).toEqual('Cannot be split equally.')
   })
 
@@ -22,5 +22,9 @@ describe('calculator', function() {
   it('can calculate the total of the gem array', function() {
     calculator.calculate([4,4,4], 3)
     expect(calculator.total).toEqual(12)
+  })
+
+  it('can identify an oversized gem that prevents fair division', function() {
+    expect(calculator.calculate([12,3,4], 3)).toEqual('Cannot be split equally.')
   })
 })
