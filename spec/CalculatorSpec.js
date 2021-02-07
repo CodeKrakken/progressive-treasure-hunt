@@ -18,4 +18,9 @@ describe('calculator', function() {
   it('will apportion one gem to one hunter', function() {
     expect(calculator.calculate([10], 1)).toEqual('Split successful.')
   })
+
+  it('can calculate the total of the gem array', function() {
+    calculator.calculate([4,4,4], 3)
+    expect(calculator.total).toEqual(12)
+  })
 })
