@@ -1,2 +1,2 @@
-progressive-treasure-seekers
+progressive-treasure-hunt
 ---
