@@ -38,6 +38,10 @@ describe('calculator', function() {
     expect(calculator.fairShare).toEqual(4)
   })
 
+  it('has an array of hunter shares', function() {
+    expect(calculator.shares).toBeDefined()
+  })
+
   // it('can fulfil examples from spec', function() {
   //   expect(calculator.calculate([4,4,4], 3)).toEqual('Split successful.')
   //   expect(calculator.calculate([27,7,20], 2)).toEqual('Split successful.')
