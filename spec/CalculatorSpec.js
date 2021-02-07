@@ -14,4 +14,8 @@ describe('calculator', function() {
   it('cannot split 1 gem between 2 hunter, regardless of value', function() {
     expect(calculator.calculate([10], 2)).toEqual('Cannot be split equally.')
   })
+
+  it('will apportion one gem to one hunter', function() {
+    expect(calculator.calculate([10], 1)).toEqual('Split successful.')
+  })
 })
