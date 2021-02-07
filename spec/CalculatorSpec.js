@@ -10,4 +10,8 @@ describe('calculator', function() {
   it('responds to calculate function', function() {
     expect(calculator.calculate).toBeDefined()
   })
+
+  it('cannot split 1 gem between 2 people, regardless of value', function() {
+    expect(calculator.calculate([10], 2)).toEqual('Cannot be split equally.')
+  })
 })
