@@ -33,6 +33,11 @@ describe('calculator', function() {
     expect(calculator.gems).toEqual([34, 12, 9, 6, 4, 3])
   })
 
+  it('can calculate a fair share', function() {
+    calculator.calculate([4, 2, 2, 4], 3)
+    expect(calculator.fairShare).toEqual(4)
+  })
+
   // it('can fulfil examples from spec', function() {
   //   expect(calculator.calculate([4,4,4], 3)).toEqual('Split successful.')
   //   expect(calculator.calculate([27,7,20], 2)).toEqual('Split successful.')
