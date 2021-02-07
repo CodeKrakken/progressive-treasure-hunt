@@ -42,6 +42,11 @@ describe('calculator', function() {
     expect(calculator.shares).toBeDefined()
   })
 
+  it('gathers an array of gems for the first hunter', function() {
+    calculator.calculate([1, 2, 3], 2)
+    expect(calculator.shares.length).toEqual(true)
+  })
+
   // it('can fulfil examples from spec', function() {
   //   expect(calculator.calculate([4,4,4], 3)).toEqual('Split successful.')
   //   expect(calculator.calculate([27,7,20], 2)).toEqual('Split successful.')
